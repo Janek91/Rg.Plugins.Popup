@@ -24,7 +24,7 @@ namespace Rg.Plugins.Popup.Droid.Impl
     [Preserve(AllMembers = true)]
     internal class PopupPlatformDroid : IPopupPlatform
     {
-        private static FrameLayout? DecoreView => (FrameLayout?)((Activity?)Popup.Context)?.Window?.DecorView;
+        private static FrameLayout DecoreView => (FrameLayout)((Activity)Popup.Context)?.Window?.DecorView;
 
         public event EventHandler OnInitialized
         {
@@ -69,7 +69,7 @@ namespace Rg.Plugins.Popup.Droid.Impl
                 }
             }
 
-            static void DisableFocusableInTouchMode(IViewParent? parent)
+            static void DisableFocusableInTouchMode(IViewParent parent)
             {
                 var view = parent;
                 string className = $"{view?.GetType().Name}";

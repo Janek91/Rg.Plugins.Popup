@@ -20,8 +20,8 @@ namespace Rg.Plugins.Popup.IOS.Renderers
     public class PopupPageRenderer : PageRenderer
     {
         private readonly UIGestureRecognizer _tapGestureRecognizer;
-        private NSObject? _willChangeFrameNotificationObserver;
-        private NSObject? _willHideNotificationObserver;
+        private NSObject _willChangeFrameNotificationObserver;
+        private NSObject _willHideNotificationObserver;
         private bool _isDisposed;
 
         internal CGRect KeyboardBounds { get; private set; } = CGRect.Empty;

@@ -1,7 +1,6 @@
 ﻿using System;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Windows.Renderers;
-using Windows.Foundation;
 using Windows.Graphics.Display;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
@@ -10,6 +9,7 @@ using Windows.UI.Xaml.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.UWP;
+using Rect = Windows.Foundation.Rect;
 using Size = Windows.Foundation.Size;
 using WinPopup = global::Windows.UI.Xaml.Controls.Primitives.Popup;
 
@@ -21,7 +21,7 @@ namespace Rg.Plugins.Popup.Windows.Renderers
     {
         private Rect _keyboardBounds;
 
-        internal WinPopup? Container { get; private set; }
+        internal WinPopup Container { get; private set; }
 
         private PopupPage CurrentElement => (PopupPage)Element;
 

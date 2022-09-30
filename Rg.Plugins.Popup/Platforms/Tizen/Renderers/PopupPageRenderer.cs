@@ -16,8 +16,8 @@ namespace Rg.Plugins.Popup.Tizen.Renderers
 {
     public class PopupPageRenderer : PageRenderer
     {
-        private GestureLayer? _gestureLayer;
-        private EPopup? _popup;
+        private GestureLayer _gestureLayer;
+        private EPopup _popup;
         public PopupPageRenderer()
         {
             RegisterPropertyHandler(Page.TitleProperty, UpdateTitle);

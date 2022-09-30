@@ -19,8 +19,8 @@ namespace Rg.Plugins.Popup.Services
             ".\nSee more info: "
             + Config.MigrationV1_0_xToV1_1_xUrl;
 
-        private static IPopupNavigation? _popupNavigation;
-        private static IPopupNavigation? _customNavigation;
+        private static IPopupNavigation _popupNavigation;
+        private static IPopupNavigation _customNavigation;
 
         public static IPopupNavigation Instance
         {
