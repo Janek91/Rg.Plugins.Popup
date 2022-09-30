@@ -12,9 +12,9 @@ namespace Rg.Plugins.Popup.IOS.Platform
     [Register("RgPopupPlatformRenderer")]
     internal class PopupPlatformRenderer : UIViewController
     {
-        private IVisualElementRenderer? _renderer;
+        private IVisualElementRenderer _renderer;
 
-        public IVisualElementRenderer? Renderer => _renderer;
+        public IVisualElementRenderer Renderer => _renderer;
 
         public PopupPlatformRenderer(IVisualElementRenderer renderer)
         {

@@ -21,7 +21,7 @@ namespace Rg.Plugins.Popup.Windows.Renderers
     {
         private Rect _keyboardBounds;
 
-        internal WinPopup? Container { get; private set; }
+        internal WinPopup Container { get; private set; }
 
         private PopupPage CurrentElement => (PopupPage)Element;
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Android.Content;
-using Android.OS;
 using Rg.Plugins.Popup.Droid.Impl;
 using Rg.Plugins.Popup.Droid.Renderers;
 using Rg.Plugins.Popup.Services;
@@ -11,11 +10,11 @@ namespace Rg.Plugins.Popup
 {
     public static class Popup
     {
-        internal static event EventHandler? OnInitialized;
+        internal static event EventHandler OnInitialized;
 
         internal static bool IsInitialized { get; private set; }
 
-        internal static Context? Context { get; private set; }
+        internal static Context Context { get; private set; }
 
         public static void Init(Context context)
         {
@@ -27,7 +26,7 @@ namespace Rg.Plugins.Popup
             OnInitialized?.Invoke(null, EventArgs.Empty);
         }
 
-        public static bool SendBackPressed(Action? backPressedHandler = null)
+        public static bool SendBackPressed(Action backPressedHandler = null)
         {
             var popupNavigationInstance = PopupNavigation.Instance;
 

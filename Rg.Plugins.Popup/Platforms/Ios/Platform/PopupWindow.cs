@@ -25,9 +25,9 @@ namespace Rg.Plugins.Popup.IOS.Platform
 
         }
 
-        public override UIView HitTest(CGPoint point, UIEvent? uievent)
+        public override UIView HitTest(CGPoint point, UIEvent uievent)
         {
-            var platformRenderer = (PopupPlatformRenderer?)RootViewController;
+            var platformRenderer = (PopupPlatformRenderer)RootViewController;
             var renderer = platformRenderer?.Renderer;
             var hitTestResult = base.HitTest(point, uievent);
 

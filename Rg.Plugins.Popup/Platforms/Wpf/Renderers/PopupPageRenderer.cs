@@ -18,7 +18,7 @@ namespace Rg.Plugins.Popup.WPF.Renderers
     [Preserve(AllMembers = true)]
     public class PopupPageRenderer : PageRenderer
     {
-        internal WinPopup? Container { get; private set; }
+        internal WinPopup Container { get; private set; }
 
         private PopupPage CurrentElement => (PopupPage)Element;
 

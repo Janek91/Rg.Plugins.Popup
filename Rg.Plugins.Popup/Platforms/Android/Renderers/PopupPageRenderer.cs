@@ -12,6 +12,7 @@ using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Point = Xamarin.Forms.Point;
+using Rect = Android.Graphics.Rect;
 using View = Android.Views.View;
 
 [assembly: ExportRenderer(typeof(PopupPage), typeof(PopupPageRenderer))]
@@ -59,7 +60,7 @@ namespace Rg.Plugins.Popup.Droid.Renderers
 
         protected override void OnLayout(bool changed, int l, int t, int r, int b)
         {
-            var activity = (Activity?)Context;
+            var activity = (Activity)Context;
             var element = CurrentElement;
 
             if (element == null)
@@ -144,7 +145,7 @@ namespace Rg.Plugins.Popup.Droid.Renderers
 
         protected override void OnAttachedToWindow()
         {
-            Context.HideKeyboard(((Activity?)Context)?.Window?.DecorView);
+            Context.HideKeyboard(((Activity)Context)?.Window?.DecorView);
             base.OnAttachedToWindow();
         }
 
@@ -152,7 +153,7 @@ namespace Rg.Plugins.Popup.Droid.Renderers
         {
             Device.StartTimer(TimeSpan.FromMilliseconds(0), () =>
             {
-                Popup.Context.HideKeyboard(((Activity?)Popup.Context)?.Window?.DecorView);
+                Popup.Context.HideKeyboard(((Activity)Popup.Context)?.Window?.DecorView);
                 return false;
             });
             base.OnDetachedFromWindow();
@@ -184,11 +185,11 @@ namespace Rg.Plugins.Popup.Droid.Renderers
             if (_disposed)
                 return false;
 
-            View? currentFocus1 = ((Activity?)Context)?.CurrentFocus;
+            View currentFocus1 = ((Activity)Context)?.CurrentFocus;
 
             if (currentFocus1 is EditText)
             {
-                View? currentFocus2 = ((Activity?)Context)?.CurrentFocus;
+                View currentFocus2 = ((Activity)Context)?.CurrentFocus;
                 if (currentFocus1 == currentFocus2 && _downPosition.Distance(new Point(e.RawX, e.RawY)) <= Context.ToPixels(20.0) && !(DateTime.UtcNow - _downTime > TimeSpan.FromMilliseconds(200.0)))
                 {
                     var location = new int[2];
