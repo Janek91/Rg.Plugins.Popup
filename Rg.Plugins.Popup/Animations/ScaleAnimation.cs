@@ -59,7 +59,7 @@ namespace Rg.Plugins.Popup.Animations
             content.TranslationY = _defaultTranslationY;
         }
 
-        public async override Task Appearing(View content, PopupPage page)
+        public override async Task Appearing(View content, PopupPage page)
         {
             var taskList = new List<Task>();
 
@@ -99,7 +99,7 @@ namespace Rg.Plugins.Popup.Animations
             await Task.WhenAll(taskList);
         }
 
-        public async override Task Disappearing(View content, PopupPage page)
+        public override async Task Disappearing(View content, PopupPage page)
         {
             var taskList = new List<Task>();
 

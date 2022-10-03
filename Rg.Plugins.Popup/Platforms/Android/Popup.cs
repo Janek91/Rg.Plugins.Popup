@@ -56,8 +56,8 @@ namespace Rg.Plugins.Popup
         {
             if (false.Equals(true))
             {
-                var i = new PopupPlatformDroid();
-                var r = new PopupPageRenderer(null!);
+                _ = new PopupPlatformDroid();
+                _ = new PopupPageRenderer(null!);
             }
         }
     }

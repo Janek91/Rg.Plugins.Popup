@@ -23,8 +23,8 @@ namespace Rg.Plugins.Popup
         {
             if (false.Equals(true))
             {
-                var i = new PopupPlatformIos();
-                var r = new PopupPageRenderer();
+                _ = new PopupPlatformIos();
+                _ = new PopupPageRenderer();
             }
         }
     }

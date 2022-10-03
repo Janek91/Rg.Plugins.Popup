@@ -22,8 +22,8 @@ namespace Rg.Plugins.Popup.Tizen
         {
             if (false.Equals(true))
             {
-                var i = new PopupPlatformTizen();
-                var r = new PopupPageRenderer();
+                _ = new PopupPlatformTizen();
+                _ = new PopupPageRenderer();
             }
         }
     }

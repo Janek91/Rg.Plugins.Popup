@@ -113,7 +113,6 @@ namespace Rg.Plugins.Popup.IOS.Impl
                     if (IsiOS13OrNewer && _windows.Contains(window))
                         _windows.Remove(window);
                     window.Dispose();
-                    window = null;
                 }
 
                 var keyWindow = UIApplication.SharedApplication.GetKeyWindow();

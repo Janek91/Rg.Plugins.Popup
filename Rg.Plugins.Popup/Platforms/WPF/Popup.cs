@@ -22,8 +22,8 @@ namespace Rg.Plugins.Popup
         {
             if (false.Equals(true))
             {
-                var i = new PopupPlatformWPF();
-                var r = new PopupPageRenderer();
+                _ = new PopupPlatformWPF();
+                _ = new PopupPageRenderer();
             }
         }
     }
