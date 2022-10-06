@@ -1,0 +1,20 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
+    <PropertyGroup>
+        <TargetFramework>monoandroid11.0</TargetFramework>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace(".Android", ""))</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="**\*.xml;**\*.axml;**\*.png;**\*.txt" Exclude="obj\**\*.*;bin\**\*.*;bin;obj" />
+        <Compile Include="**\*.cs;**\*.shared.cs" Exclude="obj\**\*.*;bin\**\*.*;bin;obj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="**\*.android.cs" />
+        <AndroidResource Include="Resources\**\*.axml" />
+        <AndroidResource Include="Resources\**\*.xml" />
+        <AndroidResource Include="Resources\**\*.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Rg.Plugins.Popup\Rg.Plugins.Popup.csproj" />
+    </ItemGroup>
+</Project>

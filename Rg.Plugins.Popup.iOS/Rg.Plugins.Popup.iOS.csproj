@@ -1,0 +1,9 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
+    <PropertyGroup>
+        <TargetFramework>xamarin.ios10</TargetFramework>
+        <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace(".iOS", ""))</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Rg.Plugins.Popup\Rg.Plugins.Popup.csproj" />
+    </ItemGroup>
+</Project>
